@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Тест иконок</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#f7f9fb;color:#1a2332;padding:40px 24px;line-height:1.5}
+.wrap{max-width:1200px;margin:0 auto}
+h1{font-size:28px;margin-bottom:8px;font-weight:900}
+h2{font-size:20px;margin:48px 0 16px;font-weight:800;letter-spacing:-.02em}
+h3{font-size:14px;color:#6a7889;margin-bottom:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+.sub{color:#6a7889;margin-bottom:32px}
+
+/* ONE BLOCK = one icon style */
+.block{
+  background:#fff;border:1px solid rgba(0,0,0,.06);border-radius:14px;
+  padding:24px;margin-bottom:16px;
+  display:grid;grid-template-columns:1fr 1fr 1fr 1fr 1fr;gap:20px;align-items:center;
+}
+.cell{display:flex;flex-direction:column;align-items:center;gap:10px}
+.cell .lbl{font-size:11px;color:#6a7889;text-align:center}
+
+/* COMMON svg sizes for compare */
+.cell svg{display:block}
+
+/* STYLE 1: Lucide (default thin, 2px stroke, round joins) */
+.st1 svg{width:24px;height:24px;stroke:#2b9aa8;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* STYLE 2: Lucide thicker (2.5px) */
+.st2 svg{width:24px;height:24px;stroke:#2b9aa8;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
+/* STYLE 3: Heroicons (1.5-2px, square caps) */
+.st3 svg{width:24px;height:24px;stroke:#2b9aa8;fill:none;stroke-width:1.75}
+
+/* STYLE 4: Phosphor (regular weight) */
+.st4 svg{width:24px;height:24px;stroke:#2b9aa8;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+
+/* STYLE 5: Filled (solid) */
+.st5 svg{width:24px;height:24px;fill:#2b9aa8;stroke:none}
+
+.note{background:#fff8e1;border-left:3px solid #f59e0b;padding:14px 18px;border-radius:8px;margin:24px 0;font-size:14px;color:#5a4a1a}
+.win{background:#e8f5e9;border-left:3px solid #2b9aa8;padding:14px 18px;border-radius:8px;margin:24px 0;font-size:14px;color:#1e5a4e}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Тест иконок — выбери стиль</h1>
+<p class="sub">В каждой строке одни и те же 5 иконок (глаз, щит, ключ, цикл, замок) но в разном стиле. Листай, тыкай — выбери какой нравится.</p>
+
+<div class="win">
+<b>Что смотреть:</b> толщина линий одинаковая? Все иконки в одном "весе"? Что-то "выпадает"? Что выглядит как взрослый медицинский сайт?
+</div>
+
+<!-- =========== STYLE 1: Lucide default (2px, round) =========== -->
+<h2>1. Lucide default — 2px, круглые концы</h2>
+<h3>самый популярный сейчас, на медицинских сайтах часто</h3>
+<div class="block st1">
+  <div class="cell">
+    <!-- Eye (Lucide) -->
+    <svg viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+    <div class="lbl">Глаз</div>
+  </div>
+  <div class="cell">
+    <!-- Shield check (Lucide) -->
+    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+    <div class="lbl">Щит ✓</div>
+  </div>
+  <div class="cell">
+    <!-- Key (Lucide) -->
+    <svg viewBox="0 0 24 24"><path d="m21 2-9.6 9.6"/><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-3.5 3.5"/><path d="m17 7 3 3"/></svg>
+    <div class="lbl">Ключ</div>
+  </div>
+  <div class="cell">
+    <!-- Refresh (Lucide) -->
+    <svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M3 21v-5h5"/></svg>
+    <div class="lbl">Цикл</div>
+  </div>
+  <div class="cell">
+    <!-- Lock (Lucide) -->
+    <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+    <div class="lbl">Замок</div>
+  </div>
+</div>
+
+<!-- =========== STYLE 2: Lucide thicker (2.5px) =========== -->
+<h2>2. Lucide толще — 2.5px</h2>
+<h3>жирнее, видно издалека, для крупных карточек</h3>
+<div class="block st2">
+  <div class="cell">
+    <svg viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+    <div class="lbl">Глаз</div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+    <div class="lbl">Щит ✓</div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 24 24"><path d="m21 2-9.6 9.6"/><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-3.5 3.5"/><path d="m17 7 3 3"/></svg>
+    <div class="lbl">Ключ</div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M3 21v-5h5"/></svg>
+    <div class="lbl">Цикл</div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+    <div class="lbl">Замок</div>
+  </div>
+</div>
+
+<!-- =========== STYLE 3: Heroicons (1.75px) =========== -->
+<h2>3. Heroicons — 1.75px, квадратные концы</h2>
+<h3>Tailwind-стиль, строгие формы, деловой</h3>
+<div class="block st3">
+  <div class="cell">
+    <svg viewBox="0 0 24 24"><path d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/><path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/></svg>
+    <div class="lbl">Глаз</div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 24 24"><path d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.063 2.522-.187 3.757a48.348 48.348 0 0 1-3.286 12.243m-13.83-15.999A48.667 48.667 0 0 0 3 12c0 1.268.063 2.522.187 3.757a48.348 48.348 0 0 0 3.286 12.243M19.5 12c0-1.268-.063-2.522-.187-3.757a48.348 48.348 0 0 0-3.286-12.243M3.75 12h16.5"/></svg>
+    <div class="lbl">Shield ✓ (24path)</div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 24 24"><path d="M15.75 5.25a3 3 0 0 1 3 3v3a3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3M3.75 19.5h16.5"/></svg>
+    <div class="lbl">Не подошло</div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 24 24"><path d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"/></svg>
+    <div class="lbl">Цикл ✓</div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 24 24"><path d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"/></svg>
+    <div class="lbl">Замок</div>
+  </div>
+</div>
+
+<!-- =========== STYLE 4: Phosphor (1.75, round) =========== -->
+<h2>4. Phosphor — 1.75px, мягкие формы</h2>
+<h3>уютный, не такой строгий как Lucide</h3>
+<div class="block st4">
+  <div class="cell">
+    <svg viewBox="0 0 24 24"><path d="M12 5c-7 0-10 7-10 7s3 7 10 7 10-7 10-7-3-7-10-7Z"/><circle cx="12" cy="12" r="2.5"/></svg>
+    <div class="lbl">Глаз</div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 24 24"><path d="M12 2 4 5v7c0 5 3.5 9 8 10 4.5-1 8-5 8-10V5l-8-3Z"/><path d="m8 12 3 3 5-5"/></svg>
+    <div class="lbl">Щит ✓</div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 24 24"><circle cx="8" cy="15" r="4"/><path d="m10.85 12.15 8.65-8.65M16 7l3 3"/></svg>
+    <div class="lbl">Ключ</div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/></svg>
+    <div class="lbl">Цикл</div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+    <div class="lbl">Замок</div>
+  </div>
+</div>
+
+<!-- =========== STYLE 5: FILLED (solid) =========== -->
+<h2>5. Filled (заливка)</h2>
+<h3>плотный, как app-иконки. Мощно, но "тяжело" если везде</h3>
+<div class="block st5">
+  <div class="cell">
+    <svg viewBox="0 0 24 24"><path d="M12 5c-7 0-10 7-10 7s3 7 10 7 10-7 10-7-3-7-10-7zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></svg>
+    <div class="lbl">Глаз</div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 24 24"><path d="M12 2 4 5v7c0 5 3.5 9 8 10 4.5-1 8-5 8-10V5l-8-3zm-1 14L7 12l1.4-1.4L11 13.2l4.6-4.6L17 10l-6 6z"/></svg>
+    <div class="lbl">Щит ✓</div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 24 24"><path d="M21 2 13.4 9.6a6 6 0 1 0 1 1L22 3l-1-1zM7.5 14a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg>
+    <div class="lbl">Ключ</div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 24 24"><path d="M12 4V1L8 5l4 4V6c3.3 0 6 2.7 6 6 0 1-.2 1.9-.6 2.7l1.5 1.5C19.5 15 20 13.5 20 12c0-4.4-3.6-8-8-8zm0 14c-3.3 0-6-2.7-6-6 0-1 .2-1.9.6-2.7L5.1 7.8C4.5 9 4 10.5 4 12c0 4.4 3.6 8 8 8v3l4-4-4-4v3z"/></svg>
+    <div class="lbl">Цикл</div>
+  </div>
+  <div class="cell">
+    <svg viewBox="0 0 24 24"><path d="M18 10V7a6 6 0 0 0-12 0v3H4v12h16V10h-2zM8 7a4 4 0 0 1 8 0v3H8V7z"/></svg>
+    <div class="lbl">Замок</div>
+  </div>
+</div>
+
+<!-- =========== CONTEXT: как выглядит в реальных блоках =========== -->
+<h1 style="margin-top:64px">В контексте — как смотрится в карточках</h1>
+<p class="sub">Слева: в круге с фоном (как в карточках на сайте). Справа: просто иконка.</p>
+
+<h2>В круге (как в карточках "Что вы получите")</h2>
+<div class="block" style="grid-template-columns:1fr 1fr 1fr 1fr 1fr">
+
+  <div class="cell">
+    <div style="width:48px;height:48px;border-radius:14px;background:rgba(43,154,168,.08);display:flex;align-items:center;justify-content:center">
+      <svg viewBox="0 0 24 24" style="width:24px;height:24px;stroke:#2b9aa8;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+    </div>
+    <div class="lbl">Lucide 2px</div>
+  </div>
+
+  <div class="cell">
+    <div style="width:48px;height:48px;border-radius:14px;background:rgba(43,154,168,.08);display:flex;align-items:center;justify-content:center">
+      <svg viewBox="0 0 24 24" style="width:24px;height:24px;stroke:#2b9aa8;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+    </div>
+    <div class="lbl">Lucide 2.5px</div>
+  </div>
+
+  <div class="cell">
+    <div style="width:48px;height:48px;border-radius:14px;background:rgba(43,154,168,.08);display:flex;align-items:center;justify-content:center">
+      <svg viewBox="0 0 24 24" style="width:24px;height:24px;stroke:#2b9aa8;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round"><path d="M12 5c-7 0-10 7-10 7s3 7 10 7 10-7 10-7-3-7-10-7Z"/><circle cx="12" cy="12" r="2.5"/></svg>
+    </div>
+    <div class="lbl">Phosphor</div>
+  </div>
+
+  <div class="cell">
+    <div style="width:48px;height:48px;border-radius:14px;background:rgba(43,154,168,.08);display:flex;align-items:center;justify-content:center">
+      <svg viewBox="0 0 24 24" style="width:24px;height:24px;fill:#2b9aa8"><path d="M12 5c-7 0-10 7-10 7s3 7 10 7 10-7 10-7-3-7-10-7zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></svg>
+    </div>
+    <div class="lbl">Filled</div>
+  </div>
+
+  <div class="cell">
+    <div style="width:48px;height:48px;border-radius:14px;background:#2b9aa8;display:flex;align-items:center;justify-content:center">
+      <svg viewBox="0 0 24 24" style="width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+    </div>
+    <div class="lbl">На цветном фоне</div>
+  </div>
+
+</div>
+
+<div class="note">
+<b>Заметки:</b><br>
+• Lucide 2px и 2.5px — самые "чистые" и одинаковые. Это то, что используют топовые мед-сайты (Linear, Stripe, Vercel).<br>
+• Phosphor — чуть мягче, "уютнее", но концы круглые могут не всем зайти.<br>
+• Filled — когда хочешь "мощности", но переборщить легко.<br>
+• В карточках на круге 48px — на сайте иконка 24px внутри. Должна быть воздушная, не толстая.
+</div>
+
+</div>
+</body>
+</html>
