@@ -1,0 +1,26 @@
+{
+  "name": "starunov-site",
+  "version": "1.0.0",
+  "description": "Старунов Эдуард Вадимович — лазерная коррекция SMILE PRO",
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aktogde1/starunov-site.git"
+  },
+  "keywords": [
+    "smile-pro",
+    "laser-correction",
+    "ophthalmology"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aktogde1/starunov-site/issues"
+  },
+  "homepage": "https://github.com/aktogde1/starunov-site#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}
