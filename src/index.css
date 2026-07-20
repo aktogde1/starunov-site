@@ -630,5 +630,94 @@ footer{border-top:1px solid var(--border);padding:48px 0 0;background:var(--bg)}
   .hero-meta-num{font-size:24px}
   .lightbox{padding:12px}
   .lightbox-close{top:12px;right:12px}
+  .rev-tabs{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .rev-cards-viewport{overflow-x:auto}
+  .rev-card{min-width:85vw}
+  .rev-nav{justify-content:center}
+}
+
+/* === Reviews (Shilova-style) === */
+.reviews-shilova{padding:64px 0;background:var(--bg-2)}
+:root{--star-fill:#f5a623;--star-empty:rgba(0,0,0,.12)}
+[data-theme="dark"]{--star-fill:#f5a623;--star-empty:rgba(255,255,255,.12)}
+
+/* Platform tabs */
+.rev-tabs{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:24px}
+.rev-tab{
+  display:flex;align-items:baseline;gap:6px;padding:8px 16px;border-radius:8px;
+  border:1px solid transparent;background:transparent;cursor:pointer;
+  font-size:14px;color:var(--text-dim);transition:all .15s
+}
+.rev-tab:hover{background:var(--surface-2)}
+.rev-tab.active{background:var(--surface);border-color:var(--border);box-shadow:0 1px 3px rgba(0,0,0,.04);color:var(--text)}
+.rev-tab-name{font-weight:500}
+.rev-tab-rating{font-size:13px;font-weight:600;color:var(--accent)}
+
+/* Summary */
+.rev-summary{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.rev-summary-left{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.rev-summary-score{font-size:20px;font-weight:700;color:var(--text)}
+.rev-summary-outof{font-size:14px;color:var(--text-dim)}
+.rev-summary-count{font-size:13px;color:var(--text-dim);margin-left:4px}
+.stars{display:inline-flex;gap:2px;align-items:center}
+.rev-leave-btn{font-size:13px;padding:8px 16px;white-space:nowrap}
+
+/* Cards viewport */
+.rev-cards-viewport{overflow:hidden;margin:0 -8px}
+.rev-cards-track{display:flex;transition:transform .35s ease;padding:0 8px}
+.rev-card{
+  flex:0 0 calc(33.333% - 16px);min-width:0;margin:0 8px;
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+  padding:24px;display:flex;flex-direction:column;gap:12px
+}
+@media(max-width:900px){.rev-card{flex:0 0 calc(50% - 16px)}}
+@media(max-width:640px){.rev-card{flex:0 0 calc(100% - 16px)}}
+
+.rev-card-head{display:flex;align-items:center;gap:12px}
+.review-avatar{
+  width:44px;height:44px;border-radius:50%;flex-shrink:0;
+  background:var(--surface-2);color:var(--text-dim);
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;font-weight:600
+}
+.rev-card-meta{display:flex;flex-direction:column;gap:3px}
+.rev-card-name{font-weight:600;font-size:15px;color:var(--text)}
+.rev-card-date{font-size:13px;color:var(--text-dim)}
+.rev-card-text{font-size:14px;line-height:1.6;color:var(--text-mid);word-break:break-word}
+.rev-card-expand{
+  align-self:flex-start;background:none;border:none;cursor:pointer;
+  font-size:13px;color:var(--accent);text-decoration:underline;padding:0
+}
+.rev-card-source{
+  font-size:12px;text-decoration:none;margin-top:auto;padding-top:4px;
+  border-top:1px solid var(--border)
+}
+.rev-card-source:hover{text-decoration:underline}
+
+/* Navigation */
+.rev-nav{display:flex;align-items:center;gap:12px;justify-content:center;margin-top:24px}
+.rev-arrow{
+  width:36px;height:36px;border-radius:50%;border:1px solid var(--border);
+  background:var(--surface);color:var(--text-mid);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;transition:all .15s
+}
+.rev-arrow:hover:not(:disabled){background:var(--surface-2);color:var(--text)}
+.rev-arrow:disabled{opacity:.3;cursor:default}
+.rev-progress{width:120px;height:3px;background:var(--border);border-radius:2px;overflow:hidden}
+.rev-progress-fill{height:100%;background:var(--accent);transition:width .3s ease;border-radius:2px}
+
+/* View all button */
+.rev-view-all{text-align:center;margin-top:24px}
+.rev-view-all-btn{
+  display:inline-block;font-size:14px;font-weight:500;color:var(--accent);
+  padding:12px 32px;border-radius:8px;border:1px solid var(--border);
+  background:var(--surface);text-decoration:none;transition:all .15s
+}
+.rev-view-all-btn:hover{background:var(--surface-2);border-color:var(--accent)}
+
+@media(max-width:640px){
+  .rev-tabs{justify-content:flex-start}
+  .rev-summary{flex-direction:column;align-items:flex-start}
+  .rev-card{min-width:calc(100% - 16px)}
 }
 
