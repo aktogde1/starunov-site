@@ -56,7 +56,7 @@ export function Reviews() {
 
   const progress = maxScroll > 0 ? (scrollIdx / maxScroll) * 100 : 100
   const expanded = useRef<Set<number>>(new Set())
-  const [toggle, setToggle] = useState(0)
+  const [, setToggle] = useState(0)
 
   const isExpanded = (idx: number) => expanded.current.has(idx)
   const toggleExpand = (idx: number) => {
