@@ -93,7 +93,6 @@ export function Reviews() {
             <span className="rev-summary-score">{TOTAL_RATING}</span>
             <span className="rev-summary-outof">из 5</span>
             <Stars rating={Math.round(parseFloat(TOTAL_RATING))} />
-            <span className="rev-summary-count">На основе {TOTAL_REVIEWS} оценок</span>
           </div>
           <a
             href="https://prodoctorov.ru/moskva/vrach/850605-starunov/"
