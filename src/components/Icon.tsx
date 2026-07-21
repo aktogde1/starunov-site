@@ -97,6 +97,18 @@ const ICONS: Record<string, React.FC<{ className?: string }>> = {
       <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
     </svg>
   ),
+  whatsapp: ({ className }) => (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
+      <path d="M3 21l1.7-4.7a8.5 8.5 0 1 1 3.7 3.7L3 21z" />
+      <path d="M9 9c0-.6.4-1 1-1h1c.3 0 .6.2.7.5l.5 1.5c.1.3 0 .6-.2.8L11 11.5c.5 1 1.3 1.8 2.3 2.3l.7-1c.2-.2.5-.3.8-.2l1.5.5c.3.1.5.4.5.7v1c0 .6-.4 1-1 1h-1A6 6 0 0 1 9 10V9z" />
+    </svg>
+  ),
+  send: ({ className }) => (
+    <svg viewBox="0 0 24 24" className={className} aria-hidden="true">
+      <path d="M21.5 4.5L2.5 12l5 2 2 6 3.5-4 5.5 4 3-15.5z" />
+      <path d="M7.5 14l5-3" />
+    </svg>
+  ),
 }
 
 const sizeClass: Record<IconSize, string> = {
