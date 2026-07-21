@@ -12,12 +12,12 @@ export const PLATFORMS = [
   { id: 'prodoctorov', name: 'ПроДокторов', rating: '4.0', url: 'https://prodoctorov.ru/moskva/vrach/850605-starunov/' },
   { id: 'napopravku', name: 'НаПоправку', rating: '5.0', url: 'https://spb.napopravku.ru/doctor-profile/starunov-eduard-vadimovich-oftalmolog/' },
   { id: 'zoon', name: 'ZOON', rating: '4.4', url: 'https://zoon.ru/msk/p-doctor/eduard_vadimovich_starunov/' },
-  { id: 'krasotaimedicina', name: 'Красота и Медицина', rating: '4.9', url: 'http://krasotaimedicina.ru/doc/starunov-eduard-vadimovich-199263214/' },
+  { id: 'krasotaimedicina', name: 'Красота и Медицина', rating: '4.9', url: 'https://krasotaimedicina.ru/doc/starunov-eduard-vadimovich-199263214/' },
   { id: 'lenotzyv', name: 'LeNotzyv', rating: '4.2', url: 'https://lenotzyv.ru/firm/ya-viju-tsentr-mikrohirurgii-glaza-44604' },
 ]
 
 export const TOTAL_RATING = '4.5'
-export const TOTAL_REVIEWS = 39
+export const TOTAL_REVIEWS = 19
 
 // Real reviews, deduplicated across platforms
 export const REVIEWS: Review[] = [
@@ -175,7 +175,7 @@ export const REVIEWS: Review[] = [
     date: '24 сентября 2021',
     rating: 5,
     platform: 'Красота и Медицина',
-    platformUrl: 'http://krasotaimedicina.ru/doc/starunov-eduard-vadimovich-199263214/',
+    platformUrl: 'https://krasotaimedicina.ru/doc/starunov-eduard-vadimovich-199263214/',
     text: 'Ответственность, отношение к больному. Их нет. Я пришел в клинику Word Vision. Удовлетворён работой этого доктора. Разъясняет чётко, приземлённо, не обещает «золотые горы». Всем советую.',
   },
 ]

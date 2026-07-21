@@ -170,14 +170,16 @@
     "timeline.4.title": "Вьетнамско-Русская клиника, Ханой",
     "timeline.5.desc": "Рефракционный хирург",
     "timeline.5.title": "Клиника «ГЛАЗ» им. Фёдорова → World Vision → «Я вижу», Москва",
-    "timeline.5.year": "с 2019"
+    "timeline.5.year": "с 2019",
+    "footer.disclaimer": "Имеются противопоказания. Необходима консультация специалиста.",
+    "footer.copyright": "Эдуард Старунов. Все права защищены."
   },
   "en": {
     "about.badge": "5.0 rating",
     "about.p1": "One of the founders of refractive surgery in Russia. Student of Academician S. N. Fedorov. Since 1989 - at the Irkutsk branch of the Eye Microsurgery MNTK, he headed the department of laser and refractive surgery.",
     "about.p2": "Member of the European Association of Cataract and Refractive Surgeons (ESCRS). Author of 20 scientific publications and 5 patents for inventions.",
     "about.p3": "He practiced in clinics in Germany, Slovakia, China, Mongolia and Kazakhstan. Expert in complex cases of laser correction.",
-    "about.quote": "“I don’t promise an astronaut’s vision. I promise vision that suits you, and an operation after which you can calmly return to life.\"",
+    "about.quote": "“I don’t promise an astronaut’s vision. I promise vision that suits you, and an operation after which you can calmly return to life.”",
     "about.subtitle": "Refractive ophthalmic surgeon. Specialization: SMILE PRO and complex cases of laser vision correction.",
     "about.title": "Starunov Eduard Vadimovich",
     "cert.institution": "Establishment",
@@ -343,6 +345,8 @@
     "timeline.4.title": "Vietnamese-Russian Clinic, Hanoi",
     "timeline.5.desc": "Refractive Surgeon",
     "timeline.5.title": "Clinic \"GLAZ\" named after. Fedorova → World Vision → “I see”, Moscow",
-    "timeline.5.year": "since 2019"
+    "timeline.5.year": "since 2019",
+    "footer.disclaimer": "Contraindications exist. Consultation with a specialist is required.",
+    "footer.copyright": "Eduard Starunov. All rights reserved."
   }
 }

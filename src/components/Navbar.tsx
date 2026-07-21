@@ -25,6 +25,9 @@ export function Navbar({ a11y, setA11y }: { a11y: boolean; setA11y: (v: boolean)
     <>
       <nav>
         <div className="wrap">
+          <a href="#" className="nav-brand" onClick={(e) => { e.preventDefault(); window.scrollTo({top:0,behavior:'smooth'}) }}>
+            Старунов<span> Э.В.</span>
+          </a>
           <ul className="nav-links">
             {NAV_LINKS.map((link) => (
               <li key={link.id}>
@@ -35,6 +38,14 @@ export function Navbar({ a11y, setA11y }: { a11y: boolean; setA11y: (v: boolean)
             ))}
           </ul>
           <div className="nav-actions">
+            <a
+              href="https://wa.me/79318889990?text=Здравствуйте! Хочу записаться на консультацию по лазерной коррекции"
+              target="_blank"
+              rel="noopener"
+              className="nav-cta"
+            >
+              <span data-i18n="nav.contact">{t('nav.contact')}</span>
+            </a>
             <button
               className={`a11y-toggle ${a11y ? 'active' : ''}`}
               onClick={() => setA11y(!a11y)}

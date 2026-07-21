@@ -10,7 +10,7 @@ export function CTA() {
         <p data-i18n="cta.subtitle">{t('cta.subtitle')}</p>
         <div className="cta-actions">
           <a
-            href="https://wa.me/79318889990"
+            href="https://wa.me/79318889990?text=Здравствуйте! Хочу записаться на консультацию по лазерной коррекции"
             target="_blank"
             rel="noopener"
             className="cta-messenger cta-wa"

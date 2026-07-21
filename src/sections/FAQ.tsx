@@ -25,14 +25,14 @@ export function FAQ() {
         <div className="faq-list">
           {FAQS.map((item, idx) => (
             <div className={`faq-item${open === idx ? ' open' : ''}`} key={idx}>
-                <div className="faq-q" onClick={() => setOpen(open === idx ? null : idx)}>
+                <button className="faq-q" onClick={() => setOpen(open === idx ? null : idx)} aria-expanded={open === idx}>
                   <span data-i18n={item.qKey}>{t(item.qKey)}</span>
                   <span className="faq-plus">
                     <svg className="ic ic-sm" viewBox="0 0 24 24" style={{ transform: open === idx ? 'rotate(45deg)' : 'rotate(0)', transition: 'transform .2s' }}>
                       <path d="M12 5v14M5 12h14" />
                     </svg>
                   </span>
-                </div>
+                </button>
                 <div className="faq-a" style={{ maxHeight: open === idx ? '500px' : '0px', overflow: 'hidden', transition: 'max-height .3s ease', marginTop: open === idx ? '12px' : '0' }}>
                   <p data-i18n={item.aKey}>{t(item.aKey)}</p>
                 </div>

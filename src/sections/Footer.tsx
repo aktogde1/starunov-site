@@ -1,12 +1,14 @@
+import { useLang } from '../i18n/LangContext'
 import { Icon } from '../components/Icon'
 
 export function Footer() {
+  const { t } = useLang()
   return (
     <footer>
       <div className="wrap">
         <div className="foot-main-grid">
           <div className="foot-col foot-col-contacts">
-            <h4>Контакты</h4>
+            <h4>{t('footer.contacts')}</h4>
             <div className="foot-contact-row">
               <Icon name="mapPin" size="sm" />
               <span>Clean View Clinic, Санкт-Петербург,<br/>ул. Молдагуловой, д. 7/6</span>
@@ -14,13 +16,10 @@ export function Footer() {
           </div>
         </div>
         <div className="foot-disclaimer">
-          <p>
-            Имеются противопоказания. Необходима консультация специалиста.
-            Лицензия: [указать номер]
-          </p>
+          <p>{t('footer.disclaimer')}</p>
         </div>
         <div className="foot-bottom">
-          <span>© {new Date().getFullYear()} Эдуард Старунов. Все права защищены.</span>
+          <span>© {new Date().getFullYear()} {t('footer.copyright')}</span>
         </div>
       </div>
     </footer>
